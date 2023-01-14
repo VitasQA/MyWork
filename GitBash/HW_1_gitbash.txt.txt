@@ -1,0 +1,84 @@
+1) Посмотреть где я
+	pwd
+
+2) Создать папку
+	mkdir test
+
+3) Зайти в папку
+	cd test
+
+4) Создать 3 папки
+	mkdir test_1 test_2 test_3
+
+5) Зайти в любоую папку
+	cd test_1
+
+6) Создать 5 файлов (3 txt, 2 json)
+	touch qa_1.txt qa_2.txt qa_3.txt aq_1.json aq_2.json
+
+7) Создать 3 папки
+	mkdir folder_1 folder_2 folder_3
+
+8. Вывести список содержимого папки
+	ls 
+	ls -l
+	ls -a
+	ls -1
+
+9) + Открыть любой txt файл
+	vim qa_3.txt
+
+10) + написать туда что-нибудь, любой текст.
+	press button "insert"
+	write text
+
+11) + сохранить и выйти.
+	press button "esc"
+	:wq
+
+12) Выйти из папки на уровень выше
+	cd ..
+
+3) переместить любые 2 файла, которые вы создали, в любую другую папку.
+	mv qa_1.txt qa_2.txt folder_1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+	cp aq_1.json aq_2.json folder_2
+
+15) Найти файл по имени
+	find -name aq_1.json
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+	tail -f qa_3.txt | grep "pattern"
+
+17) вывести несколько первых строк из текстового файла
+	head -n 3 qa_3.txt
+
+18) вывести несколько последних строк из текстового файла
+	tail -n 5 qa_3.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+	less qa_3.txt
+	/can  - will find and highlight the world "can"
+	press "q" to exit
+
+20) вывести дату и время
+	date
+
+Задание *
+1) Отправить http запрос на сервер.
+	curl http://162.55.220.72:5005/get_method?name=Vitaliy&age=31
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+		touch myscript
+		nano myscript
+		#!/bin/bash
+	3 -	cd folder_4
+	4 -	mkdir soft_1 soft_2 soft_3
+	5 - 	cd soft_1
+	6 -	touch file1.txt file2.txt file3.txt fil1.json fil2.json
+	7 -	mkdir papka_1 papka_2 papka_3
+	8 -	ls -l
+	13 -	mv file1.txt file2.txt papka_1
+
+		./myscript - launch the script
